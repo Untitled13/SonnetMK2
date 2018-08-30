@@ -1,3 +1,14 @@
-This project requires the Glasgow Haskell Platform.
+This project requires the Glasgow Haskell Platform, As well as the "System.Random" module. 
+System.Random comes with the full version of GHC, so I recommend that.
+
+You can aquire these at: https://www.haskell.org/platform/
+
+In order for this project to run you must edit the file sonnet.hs
+line 37 of sonnet.hs contains a Haskell comment writen with the opening and closing braces "{-" and "-}"
+where that comment is write the directory where you have stored Robert_Frost_Proccessed.txt, Sonnet.txt, and Complete_Works.txt.
+
+It should be writen as a string with quotes on either end, for example:
+"/Users/Example_User/Example_Directory"
+
 you can run this project with the following command in terminal(definitely) or powershell(maybe):
 runhaskell sonnet.hs
