@@ -39,7 +39,7 @@ main = (do
      putStrLn "\nNew Poem\n"
      putStr "Author = "
      ans <- getLine
-     src <- readFile $ artist ans
+     src <- readFile $ {-here you need to write your directory name in quotes for example "/Users/admin/Downloads" also you'll need to delete these brackets with dashes inside arround this comment -} ++ (artist ans)
      putStr "First Words = "
      input <- getLine
      putStr "Number of Words = "
