@@ -1,9 +1,4 @@
 
-{-
-
-:l /Users/calreese/Desktop/myHaskell/sonnet.hs
-
--}
 
 import Data.List
 import Data.Char
@@ -44,7 +39,7 @@ main = (do
      putStrLn "\nNew Poem\n"
      putStr "Author = "
      ans <- getLine
-     src <- readFile $ "/Users/calreese/Documents/Programming/" ++ artist ans
+     src <- readFile $ artist ans
      putStr "First Words = "
      input <- getLine
      putStr "Number of Words = "
