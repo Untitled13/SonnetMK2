@@ -1,9 +1,6 @@
-
-
 import Data.List
 import Data.Char
 import System.Random
-
 
 mode :: Ord a => [a] -> a
 mode xs = snd $ maximum dic
@@ -22,8 +19,6 @@ match m xs
      | take len xs == m   = (head $ apply len tail xs) : (match m $ tail xs)
      | otherwise          = match m $ tail xs
      where len = length m
-
-
 
 apply :: (Integral b) => b -> (a -> a) -> a -> a
 apply 1 f = f
@@ -49,7 +44,6 @@ main = (do
      putStrLn $ concat $ loop (words $ map toLower $ filter (\x -> (isLetter x || x == ' '))  input) (words $ map toLower $ filter (\x -> (isLetter x || x == ' ')) src) (read i)
      main)
 
-
 loop :: [[Char]] -> [[Char]] -> Int -> [[Char]]
 loop _ _ 0 = []
 loop input str n
@@ -62,7 +56,3 @@ artist "Frost" = "Robert_Frost_Proccessed.txt"
 artist "Shakespeare" = "Sonnet.txt"
 artist "Shakespeare All" = "Complete_Works.txt"
 artist n = "Sonnet.txt"
-
-
-
-
